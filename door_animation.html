@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Door Animation</title>
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(145deg, #4B0082, #8B0000);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            color: gold;
+        }
+        .door {
+            position: relative;
+            width: 200px;
+            height: 400px;
+            background: black;
+            border: 5px solid gold;
+            transform-origin: left;
+            transform: perspective(1000px) rotateY(0);
+            transition: transform 1s ease-in-out;
+        }
+        .door:hover {
+            transform: perspective(1000px) rotateY(-90deg);
+        }
+        .tagline {
+            position: absolute;
+            bottom: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="door">
+        <div class="tagline">Elegance in Every Detail</div>
+    </div>
+</body>
+</html>
